@@ -1,0 +1,20 @@
+{
+  "name": "express-tutorial-mozilla",
+  "version": "1.0.0",
+  "description": "Tutorial de ExpressJS de Mozilla",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon server.js"
+  },
+  "author": "Jose Rivas",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "express": "^4.15.3",
+    "express-jsonschema": "^1.1.6",
+    "mysql": "^2.13.0"
+  },
+  "devDependencies": {
+    "nodemon": "^1.11.0"
+  }
+}
