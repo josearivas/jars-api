@@ -1,14 +1,14 @@
 var UsuariosSchema = {
     type: 'object',
     properties: {
-        number: {
-            type: 'number',
-            required: true
-        },
-        name: {
+        firstName: {
             type: 'string',
             required: true
-        }
+        },
+        lastName: {
+            type: 'string',
+            required: true
+        }		
     }
 };
 

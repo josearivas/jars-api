@@ -6,18 +6,13 @@ var router = express.Router();
 var usuariosSchema = require('../schemas/usuarios_schemas');
 
 router.route('/usuarios')
-
 	.get(usuarios.getUsuarios)
-	
-	.post(validate({body: usuariosSchema}), function(req, res) {
-		console.log("Metodo POST");
-		console.log("BODY: " + JSON.stringify(req.body));
-		res.json({ mensaje: 'Operacion con post realizada' });
-	})
+	.post(validate({body: usuariosSchema}), usuarios.createUsuario)
 	
 router.route('/usuarios/:usuario_id')
-
-	.get(usuarios.getUsuariosById)	
+	.get(usuarios.getUsuarioById)
+	.put(usuarios.updateUsuarioById)
+	.patch(usuarios.updatePartialUsuarioById)
+	.delete(usuarios.deleteUsuarioById)			
 	
-
 module.exports = router
